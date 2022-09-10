@@ -1,0 +1,299 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+/* red #d33730 
+   White #d2d2ca
+   Grey #acacae
+   Black #383838
+*/
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.row{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    position: relative;
+}
+
+
+
+/*
+
+
+
+
+nav
+
+
+
+
+*/
+
+#nav-bar {
+    padding-top: 16px;
+}
+
+.nav__upper {
+    padding: 4px 4px 0 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__logo--img {
+    height: 75px;
+}
+
+.nav__links--list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav__link {
+    font-weight: 700;
+    margin-left: 60px;
+    color: #d2d2ca;
+}
+
+.small-background {
+    padding: 2px;
+    background-color: #383838;
+    border-radius: 4px;
+}
+
+.link-hover-effect:after {
+    content: "";
+    position: absolute;
+    background-color: #d2d2ca;
+    height: 2px;
+    width: 0%;
+    right: 0;
+    bottom: 0;
+    transition: all 300ms ease;
+}
+
+.link-hover-effect:hover:after {
+    width: 100%;
+    left: 0;
+}
+.call-to-action {
+    background-color: #d33730 ;
+    padding: 12px 40px;
+    border-radius: 50px;
+    transition: all 450ms ease;
+}
+
+.call-to-action:hover {
+    background-color:#383838 ;
+    color:#d2d2ca ;
+}
+
+.nav__lower {
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav__title{
+    color: #d2d2ca;
+    padding: 4px;
+    background-color: rgba(0, 0, 0, .6);
+    border-radius: 25px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 1.6px;
+    font-size: 44px;
+    max-width: 1000px;
+    margin-bottom: 40px;
+}
+
+.input--wrapper {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.nav__search-bar{
+    width: 100%;
+    max-width: 800px;
+    height: 60px;
+    padding-left: 20px;
+    font-size: 20px;
+    border: 2px solid rgba(0, 0, 0, .1);
+    border-radius: 50px;
+}
+
+.fa-magnifying-glass {
+    position: absolute;
+    font-size: 40px;
+    cursor: pointer;
+    right: 16px;
+    transition: color 300ms ease;
+}
+
+.fa-magnifying-glass:hover {
+    color: #acacae ;
+}
+
+.nav__overlay,
+.nav__overlay-bottom {
+    background-image: url(./assets/nav\ background.webp);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 60%;
+    z-index: -1;
+    border-bottom-left-radius:  16px;
+    border-bottom-right-radius: 16px;
+}
+
+.nav__overlay {
+    top: 0;
+}
+
+.nav__overlay-bottom {
+    bottom: 0;
+    top: 40%;
+    opacity: .2;
+}
+/* 
+
+
+
+
+searched results  
+
+
+
+
+*/
+
+#search__entries {
+    width: 100%;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search__slider--wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search__slider {
+    padding: 12px;
+    width: 100%;
+}
+
+.slider__runway {
+    background-color: #d33730;
+    border-radius: 12px;
+    height: 6px;
+    width: 380px;
+    margin: 16px 0;
+    position: relative;
+}
+
+.slider__bar{
+    position: absolute;
+    width: 100%;
+    height: 6;
+    left: 0;
+}
+
+.slider__button--left,
+.slider__button--right {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #383838;
+    background-color: #d2d2ca;
+    border-radius: 50%;
+    top: -4.55px;
+    bottom: 0;
+    cursor: grab;
+    transition: transform 300ms ease;
+}
+
+.slider__button--right {
+    right: 0;
+}
+
+.slider__button--left {
+    left: 0;
+}
+
+.slider__button--right:hover,
+.slider__button--left:hover {
+    transform: scale(1.3);
+}
+
+/*
+
+
+
+
+Pokemon Card 
+
+
+
+
+*/
+
+#results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.pokemon-card__wrapper {
+    margin-top: 40px;
+    margin-right: 20px;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 2px solid rgba(0, 0, 0, .1);
+    box-shadow: 0 2px 8px 2px rgba(0, 0, 0, .7) ;
+    border-radius: 24px;
+}
+
+.pokemon__name {
+    font-size: 32px;
+    font-weight: 500;
+    margin: -8px 0 8px 0;
+}
+
+.pokemon__type {
+    margin-bottom: 8px;
+}
