@@ -8,8 +8,8 @@ let slider = document.querySelector(`.search__slider`)
 
 
 async function pokemonDisplay(filter) {
-    for(let i = 1; i <= 905; i++) {
-        if( promises.length < 905) {
+    for(let i = 1; i <= 50; i++) {
+        if( promises.length < 50) {
             let response = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`)
             let data = await response.json();
             promises.push(data);
@@ -24,7 +24,7 @@ async function pokemonDisplay(filter) {
     }));
     
     pokemonWants.push({
-            name: "Magikarp",
+            name: "magikarp",
             id: 999,
             image: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/129.png`,
             type: `divine, god`,
