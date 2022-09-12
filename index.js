@@ -67,6 +67,12 @@ function pokemonSearch(event) {
         }
     }
 }
+pokemonDisplay();
+
+function showPokeInfo(id) {
+    localStorage.setItem("id", id);
+    window.location.href = `${window.location.origin}/pokemon.html`
+}
 
 function filterPokemon(event) {
     pokemonDisplay(event.target.value)
@@ -74,7 +80,7 @@ function filterPokemon(event) {
 
 function pokemonHtml(arr) {
     return arr.map(data => {
-        return `<div class="pokemon-card__wrapper">
+        return `<div class="pokemon-card__wrapper" onclick="showPokeInfo(${data.id})">
         <figure class="pokemon__img--wrapper">
         <img class="pokemon__img" src=${data.image} alt="" />
         </figure>
@@ -89,5 +95,3 @@ function pokemonHtml(arr) {
 }
 
 
-
-pokemonDisplay();
