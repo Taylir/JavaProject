@@ -6,27 +6,12 @@
    Black #383838
 */
 
-
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
-
-@mixin track() {
-    background: none; /* get rid of Firefox track background */
-    height: 100%;
-    width: 100%;
-  }
-  
-@mixin thumb() {
-    background: currentcolor;
-    border: none; /* get rid of Firefox thumb border */
-    border-radius: 0; /* get rid of Firefox corner rounding */
-    pointer-events: auto; /* catch clicks */
-    width: 320px; height: 16px;
-  }
 
 .row{
     width: 100%;
@@ -41,16 +26,6 @@ li {
 a {
     text-decoration: none;
     position: relative;
-}
-
-input[type='range'] {
-    grid-column: 1;
-    grid-row: 2;
-    background: none; /* get rid of white Chrome background */
-    color: #000;
-    font: inherit; /* fix too small font-size in both Chrome & Firefox */
-    margin: 0;
-    pointer-events: none;
 }
 
 /*
@@ -222,21 +197,6 @@ searched results
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.slider__button--wrapper {
-    display: grid;
-    grid-template-rows: max-content 16px;
-    margin: 0 auto;
-    width: 320px;
-    overflow: hidden;
-    position: relative;
-    background: linear-gradient(0deg, #ccc 16px, transparent 0);;
-}
-
-.sr-only {
-    position: absolute;
-    clip-path: 50%;
 }
 
 /*
