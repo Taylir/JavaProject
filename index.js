@@ -67,6 +67,7 @@ function pokemonSearch(event) {
         }
     }
 }
+
 pokemonDisplay();
 
 function showPokeInfo(id) {
@@ -91,7 +92,7 @@ function pokemonHtml(arr) {
         ${data.stats}
         </p>
         </div>`
-    }).join("")
+    }).splice(0,50).join("")
 }
 
 
